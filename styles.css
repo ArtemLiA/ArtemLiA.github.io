@@ -1,0 +1,125 @@
+/* Элементные селекторы */
+p {
+    font-family: Verdana, Geneva, Tahoma;
+    font-size: 16px;
+    color: #333;
+}
+
+select{
+    width: 200px;
+    height: 30px;
+}
+
+/* Классовый селектор */
+.addition {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    padding-left: 35px;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 5px 0 #1E90FF;
+}
+
+form.addition{
+    box-shadow: inset 5px 0 cyan;
+}
+
+.feedback {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    padding-left: 35px;
+    position: relative;
+    display: inline-block;
+}
+
+p.feedback{
+    box-shadow: inset 5px 0 red;
+}
+
+form.feedback{
+    box-shadow: inset 5px 0 darkorange;
+}
+
+/* Селекторы по ID */
+#main-heading{
+    font-family:'Arial' sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1#main-heading{
+    font-style: italic;
+    padding-top: 25px;
+}
+
+p#main-heading{
+    font-style: oblique;
+    padding-bottom: 45px;
+    margin-bottom: 70px;
+    color: lightslategrey;
+}
+
+#navigation{
+    padding-top: 2rem;
+    padding-left: 35px;
+}
+
+#footer{
+    padding-left: 50px;
+}
+
+/* Атрибутные селекторы */
+input[type="search"]{
+    width: 300px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+input[type="submit"]{
+    width: 80px;
+    height: 28px;
+}
+
+
+
+/* Псевдо-класс */
+input[type="submit"]:hover {
+    background-color: deepskyblue;
+    text-decoration: underline;
+}
+
+
+/* Псевдо-элемент */
+article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+article::first-line{
+    font-style: oblique 5deg;
+}
+
+
+/* Flexbox */
+.flex-container {
+    display: flex;
+    padding-left: 35px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 13px;
+}
+
+/* Position */
+.positioned-element{
+    background-color: white;
+    position: sticky;
+    top: 20px;
+}
+
+/* @media */
+@media (max-width: 760px){
+    article{
+        padding-bottom: 20px;
+    }
+}

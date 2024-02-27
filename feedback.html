@@ -7,18 +7,40 @@
     <meta name="keywords" content="hse, student, feedback">
     <meta name="description" content="form for feedback">
     <meta name="author" content="Artem Liakhov">
+    <style>
+        .post-scriptum{
+            color: #707070;
+            display: table;
+            width: auto;
+            margin: 15px auto;
+            padding-left: 10px;
+        }
+        .main-feedback{
+            display: table;
+            width: auto;
+            margin: 15px auto;
+            letter-spacing: 1px;
+            padding-left: 10px;
+        }
+        .picture{
+            margin: auto;
+            width: 50%;
+            border: 3px solid deeppink;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1> Обратная связь </h1>
+        <h1 style="padding-bottom: 10px; border-bottom: 2px solid #E5EDEA !important;"> Обратная связь </h1>
     </header>
 
     <main>
         <section>
-            <h2> Формы для обратной связи </h2>
+        <h2 style="padding-left: 20px; font-style:italic !important;"> Формы для обратной связи </h2>
         <form>
-            <p>
+            <p class="main-feedback">
                 Если у вас есть какие-то вопросы или пожелания касательно блога, 
                 то вы можете заполнить форму ниже и я постараюсь ответить на неё как можно скорее :)
             </p>
@@ -26,7 +48,7 @@
             <button> Отправить! </button>
         </form>
         <form>
-            <p>
+            <p class="main-feedback">
                 В случае если у вас есть офигенная идея для следующего поста и 
                 вы хотите поделиться ей со мной, то вы можете сделать это ниже.
                 Я буду вам ну оооооочень признателен :)
@@ -41,19 +63,19 @@
 
         <section>
             <link rel="img" href="">
-            <h2> Post scriptum </h2>
-            <p> 
+            <h2 style="padding-left: 15px; color: #F16246 !important;"> Post scriptum </h2>
+            <p class="post-scriptum"> 
                 Заранее <samp> прошу прощения </samp> если у меня не получится
                 быстро ответить на вашу обратную связь. В некоторые периоды жизнь студента
                 напоминает одну <kbd> широко известную </kbd> в среде Вышкинцев картинку:
              </p>
-             <img width="200" height="200" src="imgs/vorona.jpg">
+             <img class="picture" width="200" height="200" src="imgs/vorona.jpg">
         </section>
     </main>
 
     <nav>
         <br>
-        <a href="index.html"> Вернуться на главную страницу</a>
+        <a href="index.html" style="color:black;"> Вернуться на главную страницу</a>
     </nav>
 
     <footer id="footer">

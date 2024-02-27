@@ -2,6 +2,7 @@
 <html lang="ru">
   
 <head>
+    <link rel="stylesheet" href="styles.css" >
     <title> Влог одного студента </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +12,23 @@
 </head>
   
 <body>
-    <header> 
-      <h1> Блог одного студента  </h1>
-      <p> 
+    <header id="main-heading"> 
+      <h1 id="main-heading"> Блог одного студента  </h1>
+      <p id="main-heading"> 
         Привет! Меня Артём и являюсь студентом 3 курса Высшей школы экономики. 
         Здесь я буду делиться своими впечатлениями об учёбе, различных мероприятиях и многом другом :)
-        Если вам это интересно, то добро пожаловать в увлекательный мир :)
+        Если вам это интересно, то добро пожаловать в увлекательный мир
+        студенческой жизни :)
       </p> 
     </header>
 
-    <form method="get"> 
+    <form class="addition" method="get"> 
     <p> 
       Если хотите найти какую-то конкретную статью или подборку по теме
       в блоге, то можете воспользоваться формой ниже:
     </p>
     <input type="search" name="query" placeholder="День студента ВШЭ">
-    <input type="submit" name="query" value="Искать!"> 
+    <input type="submit" name="query" value="Найти!"> 
   </form>
 
     <main>
@@ -34,8 +36,8 @@
       <br>
       <br>
 
-      <section> 
-        <h2> Обо мне и Вышке </h2>
+      <section class="flex-container"> 
+        <h2 class="positioned-element"> Обо мне и Вышке </h2>
         <article>
           <h3> Несколько (а может и больше) слов обо мне </h3>
           <p>
@@ -52,7 +54,7 @@
             целеустремлённых, направленных в будущее людей!
           </p>
 
-          <aside>
+          <aside class="addition">
             Интересные факты:
             <ol>
               <li> В 2022 году в ВШЭ насчитывалось более 47 тысяч (<b>!</b>) студентов. </li>
@@ -74,10 +76,10 @@
       <br>
       <br>
 
-      <section> 
+      <section class="feedback">
         <h2> Обратная связь </h2>
         <form>
-          <p> 
+          <p class="feedback"> 
           Если уважаемого читателя это сильно не затруднит, 
           то просим оставить небольшой фидбэк насколько вам понравилась
           эта страница. Эта информация нам очень поможет в улучшении блога
@@ -95,12 +97,12 @@
               <option> Ужасно </option>
             </optgroup>
           </select>
-          <input type="submit" name="feedback" value="Отправить">
+          <input type="submit" name="feedback" value="Отправить!">
         </form>
         
         <br>
         
-        <form>
+        <form class="feedback">
           Если вы хотите дать более развёрнутый комментарий по поводу блога, предложить
           темы для новых постов и статей или вам просто есть что сказать автору, то можете перейти по
           данной <a href="feedback.html">ссылке</a>.
@@ -108,9 +110,9 @@
       </section>
     </main>
 
-    <nav> 
+    <nav id="navigation"> 
       <br>
-      <h3> Интересные материалы</h3>
+      <h3> Материалы про Вышку и МИЭМ </h3>
       <ul>
         <li><a href="https://www.hse.ru/"> Сайт НИУ ВШЭ </a></li>
         <li><a href="https://miem.hse.ru/"> Сайт МИЭМ НИУ ВШЭ </a></li>
