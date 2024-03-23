@@ -37,8 +37,6 @@ function displayMessage(sender, text){
 
 function getRandomElement(array){
     item_id = Math.floor(Math.random() * array.length);
-    console.log("ITEM ID:", item_id);
-    console.log(array[item_id]);
     return array[item_id];
 }
 
@@ -54,10 +52,7 @@ function createResponse(text){
 
     if (word2response.hasOwnProperty(text)){
         array = word2response[text];
-        // For debug
-        console.log("Create good response: ", array);
         bot_text = getRandomElement(array);
-        console.log("Text: ", text);
     }
     else{
         bot_text = "Окей! :D";
