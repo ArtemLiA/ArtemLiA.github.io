@@ -69,36 +69,36 @@ function stopVoiceRecording(){
 }
 
 
+let mediaRecorder;
+const chunks = [];
+
 function createVoiceMessage(){
     navigator.mediaDevices.getUserMedia({audio: true}).then(
         function(stream){
             mediaRecorder = new MediaRecorder(stream);
-
             mediaRecorder.ondataavailable = function(e){
                 chunks.push(e.data);
             }
-
             mediaRecorder.onstop = function(){
                 const audioBlob = new Blob(chunks, {type: 'audio/wav'});
                 const audioURL = URL.createObjectURL(audioBlob);
                 sendAudioMessage(audioURL);
             }
-
             startVoiceRecording(mediaRecorder);
         }
     ).catch(
-        function(err){
-            console.log("Microphone access error :(");
+        function(error){
+            console.log("Microphone access error :(", error);
         }
-    )
+    );
 }
 
-var mediaRecorder; 
-document.getElementById('start-voice-recording')
-    .addEventListener('click', createVoiceMessage);
-document.getElementById('stop-voice-recording')
-    .addEventListener('click', stopVoiceRecording);
-
+document.getElementById('start-voice-recording').addEventListener(
+    'click', createVoiceMessage
+)
+document.getElementById('stop-voice-recording').addEventListener(
+    'click', stopRecording
+)
 
 
 function sendAudioMessage(audioURL){
