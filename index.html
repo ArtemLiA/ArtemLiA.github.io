@@ -76,20 +76,6 @@
         </article>
       </section>
 
-      <div id="map" style="height: 400px; z-index: 1"></div>
-      <script>
-        var map = L.map('map').setView([55.803504041891976, 37.41010174110167], 16)
-
-        console.log("Map debug:", map);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
-
-        L.marker([55.803504041891976, 37.41010174110167]).addTo(map)
-        .bindPopup("МИЭМ НИУ ВШЭ").openPopup();
-      </script>
-
       <br>
       <br>
 
@@ -137,6 +123,21 @@
         <button id="stop-voice-redording"> Остановить запись </button>
         <script src="src/chat.js"></script>
       </section>
+
+
+      <div id="map" style="height: 400px; z-index: 1"></div>
+      <script>
+        var map = L.map('map').setView([55.803504041891976, 37.41010174110167], 16)
+
+        console.log("Map debug:", map);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+        L.marker([55.803504041891976, 37.41010174110167]).addTo(map)
+        .bindPopup("МИЭМ НИУ ВШЭ").openPopup();
+      </script>
     </main>
 
     <nav id="navigation"> 
