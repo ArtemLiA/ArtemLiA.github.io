@@ -18,7 +18,7 @@ function sendMessage(){
     message_text = message_form.value.trim();
 
     if (message_text !== ''){
-        displayMessage("Вы: ", message_text);
+        displayMessage("Вы ", message_text);
         createResponse(message_text);
         message_form.value = '';
     }
@@ -46,15 +46,21 @@ function createResponse(text){
 
     if (word2response.hasOwnProperty(text)){
         array = word2response[text];
+
+        // For debug
+        console.log("Create good response: ", array);
+
         random_index = Math.floor(Math.random() * array.length);
         responce_text = array[random_index];
+
+        console.log("Text: ", response_text);
     }
     else{
         response_text = "К сожалению, я пока не могу ответить на ваше сообщение.";
     }
 
     setTimeout(() => {
-        displayMessage("Бот: ", response_text);
+        displayMessage("Бот ", response_text);
     }, 1500);
 }
 
