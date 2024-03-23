@@ -56,8 +56,8 @@ function createResponse(text){
         array = word2response[text];
         // For debug
         console.log("Create good response: ", array);
-        responce_text = getRandomElement(array);
-        console.log("Text: ", response_text);
+        text = getRandomElement(array);
+        console.log("Text: ", text);
     }
     else{
         response_text = "К сожалению, я пока не могу ответить на ваше сообщение.";
