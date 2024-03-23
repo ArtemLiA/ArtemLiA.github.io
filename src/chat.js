@@ -50,21 +50,21 @@ function createResponse(text){
         "Что делаешь?": ["Делаю жизнь интереснее!", "Прекрасно провожу время с Вами!", "Радуюсь жизни!"]
     };
 
-    let response_text = "";
+    let bot_text = "";
 
     if (word2response.hasOwnProperty(text)){
         array = word2response[text];
         // For debug
         console.log("Create good response: ", array);
-        text = getRandomElement(array);
+        bot_text = getRandomElement(array);
         console.log("Text: ", text);
     }
     else{
-        response_text = "К сожалению, я пока не могу ответить на ваше сообщение.";
+        bot_text = "Окей! :D";
     }
 
     setTimeout(() => {
-        displayMessage("Бот ", response_text);
+        displayMessage("Бот ", bot_text);
     }, 1500);
 }
 
