@@ -2,13 +2,16 @@
 <html lang="ru">
   
 <head>
-    <link rel="stylesheet" href="styles.css" >
-    <title> Влог одного студента </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="student, hse, blog">
     <meta name="description" content="one student's page">
     <meta name="author" content="Artem Liakhov">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <title> Влог одного студента </title>
+
 </head>
   
 <body>
@@ -73,6 +76,18 @@
         </article>
       </section>
 
+      <div id="map" style="height: 400px;"></div>
+      <script>
+        var map = L.map('map').setView([[55.803504041891976, 37.41010174110167],13])
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+        L.marker([55.803504041891976, 37.41010174110167]).addTo(map)
+        .bindPopup("МИЭМ НИУ ВШЭ").openPopup();
+      </script>
+
       <br>
       <br>
 
@@ -107,6 +122,17 @@
           темы для новых постов и статей или вам просто есть что сказать автору, то можете перейти по
           данной <a href="feedback.html">ссылке</a>.
         </form>
+      </section>
+
+      <section>
+        <h3> Виртуальный чат </h3>
+        <div id="chat-window"></div>
+        <ol id="chat-text"></ul>
+        <input type="text" id="chat-message" placeholder="Ваше сообщение...">
+        <button id="send-text-message"> Отправить сообщение </button>
+        <button id="start-voice-recording"> Записать голосовое сообщение </button>
+        <button id="stop-voice-redording"> Остановить запись </button>
+        <script src="src/chat.js"></script>
       </section>
     </main>
 
