@@ -102,7 +102,7 @@ function createVoiceMessage(){
 document.getElementById('start-voice-recording').addEventListener(
     'click', createVoiceMessage
 )
-document.getElementById('stop-voice-recording').addEventListener(
+document.getElementById("stop-voice-redording").addEventListener(
     'click', stopRecording
 )
 

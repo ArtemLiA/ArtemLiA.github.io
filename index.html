@@ -76,7 +76,7 @@
         </article>
       </section>
 
-      <div id="map" style="height: 250px;"></div>
+      <div id="map" style="height: 400px; z-index: 1"></div>
       <script>
         var map = L.map('map').setView([55.803504041891976, 37.41010174110167], 16)
 
@@ -128,8 +128,9 @@
 
       <section>
         <h3> Виртуальный чат </h3>
-        <div id="chat-window"></div>
-        <ol id="chat-text"></ul>
+        <div id="chat-window">
+          <ol id="chat-text"></ul>
+        </div>
         <input type="text" id="chat-message" placeholder="Ваше сообщение...">
         <button id="send-text-message"> Отправить сообщение </button>
         <button id="start-voice-recording"> Записать голосовое сообщение </button>
