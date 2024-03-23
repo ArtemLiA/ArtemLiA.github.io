@@ -76,6 +76,20 @@
             инженеры-конструкторы,  специалисты по компьютерной безопасности, электронике и робототехники.
           </p>
         </article>
+
+        <div id="map" style="height: 400px; width: 900px; z-index: 1"></div>
+        <script>
+          var map = L.map('map').setView([55.803504041891976, 37.41010174110167], 7)
+
+          console.log("Map debug:", map);
+
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+
+          L.marker([55.803504041891976, 37.41010174110167]).addTo(map)
+          .bindPopup("МИЭМ НИУ ВШЭ").openPopup();
+        </script>
       </section>
 
       <br>
@@ -122,31 +136,9 @@
         <input type="text" id="chat-message" placeholder="Ваше сообщение...">
         <button id="send-text-message"> Отправить сообщение </button>
         <button id="start-voice-recording"> Записать голосовое сообщение </button>
-        <button id="stop-voice-redording"> Остановить запись </button>
+        <button id="stop-voice-recording"> Остановить запись </button>
         <script src="src/chat.js"></script>
       </section>
-
-
-      <div id="map" style="height: 400px; z-index: 1"></div>
-      <script>
-        var map = L.map('map').setView([55.803504041891976, 37.41010174110167], 16)
-
-        console.log("Map debug:", map);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
-
-        L.marker([55.803504041891976, 37.41010174110167]).addTo(map)
-        .bindPopup("МИЭМ НИУ ВШЭ").openPopup();
-      </script>
-      
-      <style>
-        #map{
-          width: 600px;
-          height: 600px;
-        }
-      </style>
     </main>
 
     <nav id="navigation"> 

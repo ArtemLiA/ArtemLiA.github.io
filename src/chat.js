@@ -106,7 +106,7 @@ function createVoiceMessage(){
 document.getElementById('start-voice-recording').addEventListener(
     'click', createVoiceMessage
 )
-document.getElementById("stop-voice-redording").addEventListener(
+document.getElementById("stop-voice-recording").addEventListener(
     'click', stopVoiceRecording
 )
 
@@ -115,5 +115,5 @@ function sendAudioMessage(audioURL){
     audio_element = document.createElement('audio');
     audio_element.controls = true;
     audio_element.src = audioURL;
-    displayMessage("Вы: ", audio_element.outerHTML);
+    displayMessage("Вы", audio_element.outerHTML);
 }

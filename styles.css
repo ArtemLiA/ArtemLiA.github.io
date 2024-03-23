@@ -123,3 +123,39 @@ article::first-line{
         padding-bottom: 20px;
     }
 }
+
+#chat-message{
+    width: 200px;
+    height: 20px;
+}
+
+#send-text-message{
+    width: 200px;
+    height: 25px;
+    margin-top: 5px;
+    background-color: lemonchiffon;
+    border-width: 1px;
+}
+
+#start-voice-recording{
+    width: 210px;
+    height: 40px;
+    background-color: azure;
+    border-width: 1px;
+}
+
+#stop-voice-recording{
+    width: 195px;
+    height: 40px;
+    margin-top: 5px;
+    background-color:azure;
+    border-width: 1px;
+}
+
+#send-text-message:hover,
+#start-voice-recording:hover,
+#stop-voice-recording:hover{
+    background-color: lightcoral;
+}
+
+
