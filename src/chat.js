@@ -14,8 +14,8 @@ navigator.mediaDevices.getUserMedia({audio:true})
 
 
 function sendMessage(){
-    message_form = document.getElementById('chat-message');
-    message_text = message_form.ariaValueMax.trim();
+    message_form = document.getElementById("chat-message");
+    message_text = message_form.value.trim();
 
     if (message_text !== ''){
         displayMessage("Вы: ", message_text);
