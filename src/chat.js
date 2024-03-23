@@ -35,6 +35,12 @@ function displayMessage(sender, text){
 }
 
 
+function getRandomElement(array){
+    item_id = Math.floor(Math.random() * array.length);
+    return array[item_id];
+}
+
+
 function createResponse(text){
     word2response = {
         "Добрый день!": ["Здравствуйте!", "Чем могу помочь?", "Приветствую Вас!"],
@@ -46,13 +52,9 @@ function createResponse(text){
 
     if (word2response.hasOwnProperty(text)){
         array = word2response[text];
-
         // For debug
         console.log("Create good response: ", array);
-
-        random_index = Math.floor(Math.random() * array.length);
-        responce_text = array[random_index];
-
+        responce_text = getRandomElement(array);
         console.log("Text: ", response_text);
     }
     else{
