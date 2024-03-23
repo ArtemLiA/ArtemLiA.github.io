@@ -37,6 +37,7 @@ function displayMessage(sender, text){
 
 function getRandomElement(array){
     item_id = Math.floor(Math.random() * array.length);
+    console.log("ITEM ID: item_id");
     return array[item_id];
 }
 
@@ -105,7 +106,7 @@ document.getElementById('start-voice-recording').addEventListener(
     'click', createVoiceMessage
 )
 document.getElementById("stop-voice-redording").addEventListener(
-    'click', stopRecording
+    'click', stopVoiceRecording
 )
 
 
